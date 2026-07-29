@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-app-gradient text-slate-100 antialiased;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card-gradient backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl;
+  }
+
+  .stat-card {
+    @apply glass-card p-5 flex flex-col gap-2 hover:shadow-glow transition-shadow duration-300;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors cursor-pointer;
+  }
+
+  .sidebar-link-active {
+    @apply bg-gradient-to-r from-aiGreen/20 to-aiPurple/20 text-white border border-white/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-navy-950 bg-gradient-to-r from-aiGreen to-emerald-400 hover:brightness-110 transition-all shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-medium text-slate-200 border border-white/15 hover:bg-white/5 transition-colors;
+  }
+
+  .badge {
+    @apply px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-green {
+    @apply bg-aiGreen/15 text-aiGreen;
+  }
+
+  .badge-red {
+    @apply bg-rose-500/15 text-rose-400;
+  }
+
+  .badge-purple {
+    @apply bg-aiPurple/15 text-violet-300;
+  }
+
+  .badge-blue {
+    @apply bg-aiBlue/15 text-sky-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-aiGreen/40 focus:border-aiGreen/40 transition-all;
+  }
+
+  .table-wrap {
+    @apply glass-card overflow-hidden;
+  }
+
+  .table-wrap table {
+    @apply w-full text-sm;
+  }
+
+  .table-wrap thead {
+    @apply bg-white/5 text-slate-400 uppercase text-xs tracking-wider;
+  }
+
+  .table-wrap th, .table-wrap td {
+    @apply px-4 py-3 text-left;
+  }
+
+  .table-wrap tbody tr {
+    @apply border-t border-white/5 hover:bg-white/5 transition-colors;
+  }
+}
