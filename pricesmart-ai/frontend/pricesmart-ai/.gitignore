@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Env files
+.env
+*.env.local
+
+# Build output
+dist/
+build/
+
+# ML artifacts (kept out of git, referenced by path only)
+ai-service/app/models/*.pkl
+ai-service/app/models/*.joblib
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
